@@ -14,7 +14,7 @@ const ContactsList = ({ contacts, onDeleteContact }) => (
     </ul>
 );
 
-ContactsList.PropTypes = {
+ContactsList.propTypes = {
     id: PropTypes.any,
     name: PropTypes.string,
     number:PropTypes.string,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactsForm.module.css';
 
@@ -39,7 +39,7 @@ class ContactsForm extends Component{
                     <input type="tel" name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-                    required />
+                    className={styles.input} value={this.state.number} onChange={this.handleChange} required />
                 </label>
                 <button type="button" className={styles.btn} onClick={this.handleSubmit}>Add contact</button>
             </form>
